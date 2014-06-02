@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends Activity implements
 View.OnClickListener{
@@ -34,6 +35,8 @@ View.OnClickListener{
 		switch(v.getId()){ //どのボタンが押されたか判定
 			case R.id.btnOK: //btnMsgが押された
 				//エディットテキストから入力内容を取り出す
+				EditText etv = (EditText)findViewById(R.id.edtName);
+				String inputMsg = etv.getText().toString();
 
 				//Randomクラスのインスタンスを作る
 				Random rnd = new Random();
@@ -46,21 +49,20 @@ View.OnClickListener{
 				switch(ran){
 					case 0:
 						intent = new Intent(MainActivity.this, DaikitiActivity.class);
-						startActivity(intent);
 						break;
 					case 1:
 						intent = new Intent(MainActivity.this, TyukitiActivity.class);
-						startActivity(intent);
 						break;
 					case 2:
 						intent = new Intent(MainActivity.this, KyouActivity.class);
-						startActivity(intent);
 						break;
 					case 3:
 						intent = new Intent(MainActivity.this, DaikyouActivity.class);
-						startActivity(intent);
 						break;
 				}
+				intent.putExtra("name", inputMsg);
+				//次画面のアクティビティ起動
+				startActivity(intent);
 		}
 
 	}

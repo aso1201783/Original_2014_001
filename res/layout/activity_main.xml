@@ -14,27 +14,45 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="58dp"
-        android:layout_marginTop="103dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="36dp"
         android:text="おみくじ" />
 
     <Button
         android:id="@+id/btnOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginLeft="18dp"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignRight="@+id/imageView1"
         android:text="OK" />
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/btnOK"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="23dp"
         android:scaleType="fitXY"
         android:src="@drawable/main" />
+
+    <TextView
+        android:id="@+id/txvMsg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="61dp"
+        android:layout_toLeftOf="@+id/imageView1"
+        android:text="name" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txvMsg3"
+        android:layout_alignBottom="@+id/txvMsg3"
+        android:layout_toRightOf="@+id/txvMsg3"
+        android:ems="10" />
 
 </RelativeLayout>
